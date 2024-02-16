@@ -1,8 +1,8 @@
 import OpenAI from 'openai';
 
 const openai = new OpenAI({
-  apiKey: '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',
-  dangerouslyAllowBrowser: true
+  apiKey: process.env.OPENAI_API_KEY,
+  
 });
 
 export const generateChatResponse = async (message) => {

@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import toast from 'react-hot-toast';
 import { useMutation } from '@tanstack/react-query';
-import { generateChatResponse } from '@/utils/action';
+import { generateChatResponse } from '@/utils/actions';
 const Chat = () => {
   const [text, setText] = useState('');
   const [messages, setMessages] = useState([]);
