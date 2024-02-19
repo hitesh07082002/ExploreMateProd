@@ -1,8 +1,6 @@
 "use server"
 import OpenAI from 'openai';
-import { PrismaClient } from '@prisma/client';
-
-const prisma = new PrismaClient();
+import prisma from './db';
 
 
 const openai = new OpenAI({
@@ -119,4 +117,16 @@ export const getSingleTour = async (id) => {
       id,
     },
   });
+};
+export const generateTourImage = async ({ city, country }) => {
+  try {
+    const tourImage = await openai.images.generate({
+      prompt: `a panoramic view of the ${city} ${country}`,
+      n: 1,
+      size: '512x512',
+    });
+    return tourImage?.data[0]?.url;
+  } catch (error) {
+    return null;
+  }
 };
