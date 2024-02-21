@@ -10,6 +10,7 @@ const prisma = new PrismaClient();
 
 const url = `https://api.unsplash.com/search/photos?client_id=${process.env.UNSPLASH_API_KEY}&query=`;
 
+
 const SingleTourPage = async ({ params }) => {
   const tour = await prisma.tour.findUnique({
     where: {
@@ -20,10 +21,7 @@ const SingleTourPage = async ({ params }) => {
   const { data } = await axios(`${url}${tour.city}`);
   const tourImage = data?.results[0]?.urls?.raw;
 
-  // const tourImage = await generateTourImage({
-  //   city: tour.city,
-  //   country: tour.country,
-  // });
+  
   return (
     <div>
       <Link href='/tours' className='btn btn-secondary mb-12'>

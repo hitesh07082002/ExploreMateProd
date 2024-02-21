@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: 'Exploremate',
   description:
-    'ExploreMate: Your AI language companion. Powered by OpenAI, it enhances your conversations, content creation, and more!',
+    'ExploreMate: Your AI-powered travel companion and chat guide in one place. Experience seamless conversations and expert tour planning, all fueled by OpenAI\'s cutting-edge technology.',
 };
 
 export default function RootLayout({ children }) {

@@ -7,8 +7,7 @@ const HomePage = () => {
         <div className='max-w-md'>
           <h1 className='text-6xl font-bold text-primary'>ExploreMate</h1>
           <p className='py-6 text-lg leading-loose'>
-           ExploreMate: Your AI language companion. Powered by OpenAI, it
-            enhances your conversations, content creation, and more!
+           ExploreMate: Your AI-powered travel companion and chat guide in one place. Experience seamless conversations and expert tour planning, all fueled by OpenAI's cutting-edge technology.
           </p>
           <Link href='/chat' className='btn btn-secondary '>
             Get Started
