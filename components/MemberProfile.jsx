@@ -1,4 +1,6 @@
-import { UserButton, currentUser, auth } from '@clerk/nextjs';
+import { UserButton } from '@clerk/nextjs';
+// auth and currentUser are now imported from /server
+import { auth, currentUser } from '@clerk/nextjs/server';
 const MemberProfile = async () => {
   const user = await currentUser();
   const { userId } = auth();
